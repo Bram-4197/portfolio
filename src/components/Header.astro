@@ -1,0 +1,47 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<div
+  class="w-[calc(100%-4px)] sm:w-[calc(100%-4px-4rem)] fixed backdrop-blur-[8px] top-0 py-2 z-50 self-center"
+  id="navbar-container"
+>
+  <nav class="px-1 mx-auto max-w-sm rounded-3xl z-100">
+    <ul class="flex flex-row justify-center items-center">
+      <li class="">
+        <a
+          rel="prefetch"
+          class={currentPath === ""
+            ? "block py-2 px-3 font-semibold tracking-tighter transition hover:text-emerald-900  text-emerald-900"
+            : "block py-2 px-3 font-semibold tracking-tighter transition hover:text-emerald-900 "}
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li class="">
+        <a
+          rel="prefetch"
+          class={currentPath == "about"
+            ? "block py-2 px-3 font-semibold tracking-tighter transition hover:text-emerald-900  text-emerald-900"
+            : "block py-2 px-3 font-semibold tracking-tighter transition hover:text-emerald-900 "}
+          href="/about"
+        >
+          About
+        </a>
+      </li>
+      <li class="">
+        <a
+          rel="prefetch"
+          class={currentPath == "projects"
+            ? "block py-2 px-3 font-semibold tracking-tighter transition hover:text-emerald-900  text-emerald-900"
+            : "block py-2 px-3 font-semibold tracking-tighter transition hover:text-emerald-900 "}
+          href="/projects"
+        >
+          Projects
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

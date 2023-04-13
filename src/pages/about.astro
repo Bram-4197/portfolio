@@ -1,0 +1,33 @@
+---
+import Layout from "../layout/Layout.astro";
+import * as Content from "../content/About.md";
+---
+
+<Layout>
+  <div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-16 lg:py-24">
+        <div class="flex flex-col lg:flex-row justify-center items-center">
+          <img
+            src="https://avatars.githubusercontent.com/u/94552705?s=400&u=07887d7d1e5a0da310eedcf832221ada82c82a7c&v=4"
+            alt="Profile"
+            class="rounded-full w-64 lg:w-80 mb-8 lg:mb-0 lg:mr-16"
+          />
+          <div class="text-center lg:text-left">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-emerald-900 mb-4"
+            >
+              Over mij
+            </h2>
+            <p class="text-lg md:text-xl lg:text-2xl mb-8">
+              {Content.frontmatter.IntroTekst}
+            </p>
+            <p class="text-lg md:text-xl lg:text-xl">
+              {Content.frontmatter.OverMijTekst}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
