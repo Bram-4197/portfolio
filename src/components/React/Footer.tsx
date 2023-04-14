@@ -24,13 +24,7 @@ function Footer() {
                       >
                         About
                       </a>
-                      <a
-                        rel="prefetch"
-                        className="transition hover:text-accent-400"
-                        href="/contact"
-                      >
-                        Contact
-                      </a>
+
                       <a
                         rel="prefetch"
                         className="transition hover:text-accent-400"
